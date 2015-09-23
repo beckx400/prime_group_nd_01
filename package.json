@@ -1,0 +1,15 @@
+{
+  "name": "prime_group_nd_01-master",
+  "version": "1.0.0",
+  "description": "Group Node Challenge 01",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "Dave Beck, Dave Hoverson, Laura Kressin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
