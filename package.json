@@ -10,6 +10,8 @@
   "author": "Dave Beck, Dave Hoverson, Laura Kressin",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "jquery": "^2.1.4",
+    "path": "^0.12.7"
   }
 }

@@ -1,25 +1,46 @@
 /**
  * Created by Dave on 9/23/15.
  */
-var getName = require("./modules/name");
-var getSkill = require("./modules/skill");
-var getScrum = require("./modules/scrum");
+var getName = require("./name");
+var getSkill = require("./skill");
+var getScrum = require("./scrum");
 
-var employeeArray= [];
-
-var makeEmployee = function(){
-    var employee = [(getName(), getSkill(), getScrum())];
-    return employee;
-}
-
-var createEmployeeArray = function(){
-    var firstEmployee = makeEmployee();
-
-    if(firstEmployee[1] != "Front End"){
-        makeEmployee()
-    }
+//var makeEmployee = function(){
+//    var employee = [(getName(), getSkill(), getScrum())];
+//    return employee;
+//}
 
 
+var skillEval = function() {
+
+    var employeeArray= [];
+    var frontEnd = 0;
+    var cliSideLog = 0;
+    var serSideLog = 0;
+
+        while((frontEnd == 0) || (cliSideLog == 0) || (serSideLog == 0)) {
+            var employee = [getName(), getSkill(), getScrum()];
+            if (employee[1] == "Front End") {
+                frontEnd += 1;
+                employeeArray.push(employee);
+            } else if
+            (employee[1] == "Clientside Logic") {
+                cliSideLog += 1;
+                employeeArray.push(employee);
+            } else if(employee[1] == "Serverside Logic") {
+                serSideLog += 1;
+                employeeArray.push(employee);
+            }
+        }
+
+        return employeeArray;
+};
 
 
-}
+
+//var getScrumTotals = function(){
+//    var scrumArray = [frontEndTotal, cliSideLogTotal, serSideLogTotal];
+//    return scrumArray;
+//};
+
+module.exports = skillEval;
