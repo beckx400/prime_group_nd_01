@@ -5,10 +5,11 @@ var getName = require("./name");
 var getSkill = require("./skill");
 var getScrum = require("./scrum");
 
-//var makeEmployee = function(){
-//    var employee = [(getName(), getSkill(), getScrum())];
-//    return employee;
-//}
+var makeEmployee = function(){
+    var employee = [getName(), getSkill(), getScrum()];
+    console.log(employee);
+    return employee;
+}
 
 
 var skillEval = function() {
@@ -38,9 +39,5 @@ var skillEval = function() {
 
 
 
-//var getScrumTotals = function(){
-//    var scrumArray = [frontEndTotal, cliSideLogTotal, serSideLogTotal];
-//    return scrumArray;
-//};
-
-module.exports = skillEval;
+exports.skillEval = skillEval;
+exports.makeEmployee = makeEmployee;
