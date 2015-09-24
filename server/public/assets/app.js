@@ -31,9 +31,9 @@ $(document).ready(function(){
         }
         getScrumValues();
 
-        var scrumValues = "<ul class='scrum-values'><li>Scrum Points Needed</li><li>Front End: " + frontEndValue + "</li><li>Clientside Logic: " + cliLogValue + "</li><li>Serverside Logic: " + serLogValue + "</li></ul>"
+        var scrumValues = "<ul class='scrum-values'><li class='make-bold'>Scrum Points Needed</li><li>Front End: " + frontEndValue + "</li><li>Clientside Logic: " + cliLogValue + "</li><li>Serverside Logic: " + serLogValue + "</li></ul>"
 
-        var appendMessage = "<div class='company-container'><h2>" + companyName + "</h2><p>" + scrumValues + "</p></div><ul class='employee-list'><li>Employees</li></ul><p class='sprints'></p><button class='add-employee'>Add New Employee</button>";
+        var appendMessage = "<div class='company-container'><h2>" + companyName + "</h2><p>" + scrumValues + "</p></div><ul class='employee-list'><li class='make-bold'>Employees</li></ul><p class='sprints'></p><button class='add-employee'><span class='glyphicon glyphicon-plus'></span> Add New Employee</button>";
 
         $(".project").html(appendMessage);
 
